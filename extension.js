@@ -282,7 +282,7 @@ exports.activate = context => {
     );
 
     context.subscriptions.push(
-        commands.registerTextEditorCommand("phpcbf-soderlind", textEditor => {
+        commands.registerTextEditorCommand("phpcbf-simone-baldini", textEditor => {
             if (textEditor.document.languageId == "php") {
                 commands.executeCommand("editor.action.formatDocument");
             }
