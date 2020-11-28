@@ -2,7 +2,7 @@
   "name": "vscode-phpcbf",
   "displayName": "phpcbf",
   "description": "PHP Code Beautifier and Fixer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "simone-baldini",
   "homepage": "https://github.com/simone-baldini/vscode-phpcbf",
   "icon": "images/logo.png",

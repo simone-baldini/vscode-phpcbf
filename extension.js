@@ -175,6 +175,7 @@ class PHPCBF {
                 */
                 switch (code) {
                     case 0:
+                        reject();
                         break;
                     case 1:
                     case 2:
@@ -186,11 +187,12 @@ class PHPCBF {
                         }
                         break;
                     case 3:
+                        reject();
                         phpcbfError = true;
                         break;
                     default:
                         let msgs = {
-                            3: "PHPCBF: general script execution errors.",
+                            3: "PHPCBF: General script execution errors.",
                             16: "PHPCBF: Configuration error of the application.",
                             32: "PHPCBF: Configuration error of a Fixer.",
                             64: "PHPCBF: Exception raised within the application."
@@ -272,7 +274,7 @@ exports.activate = context => {
                 phpcbf.onsave &&
                 workspace
                 .getConfiguration("editor", editor.document.uri)
-                .get("formatOnSave") === false
+                .get("formatOnSave") !== false
             ) {
                 event.waitUntil(
                     commands.executeCommand("editor.action.formatDocument")
